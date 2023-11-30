@@ -1,3 +1,12 @@
+# Please never publish your session token
 token.txt
+
+# Input files are private
 **/input*.txt
 **/problem.txt
+
+# Ignore binaries
+bin/**
+
+# vs code
+.vscode/**
