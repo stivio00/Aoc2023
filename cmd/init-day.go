@@ -65,15 +65,6 @@ func buildDirectoryStructure(dayNumber string) error {
 	} else {
 		return err
 	}
-	// check if input2.txt exists if not download input2.txt
-	if _, err := os.Stat(dirName + "/input2.txt"); err == nil {
-		// path/to/whatever exists
-		fmt.Println("input2.txt already exists: skipping.")
-	} else if errors.Is(err, os.ErrNotExist) {
-		downloadFile("/day/"+dayNumber+"/input2", dirName+"/input2.txt")
-	} else {
-		return err
-	}
 
 	return nil
 }
